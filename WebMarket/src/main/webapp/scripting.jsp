@@ -17,7 +17,8 @@
 // 		count = count + 1;
 // 		out.println("count : " + count);
 		for (int i = 1; i <= count; i++) {
-			out.println("Java Server Pages " + i + ".<br>");
+			out.println("Java Server Pages " + i + ".<br>");  // jsp-api.jar파일에 존재 -> javax.servlet.jsp.JspWriter out = new JspWriter();
+			
 		}
 	%>
 	<%= count %>
