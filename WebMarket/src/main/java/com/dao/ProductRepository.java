@@ -23,6 +23,7 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("신상");
+		phone.setFilename("P1234.png");
 
 		// 노트북에 대한 상품정보 저장
 		Product notebook = new Product("P1235", "LG PC 그램", 1800000);
@@ -31,6 +32,7 @@ public class ProductRepository {
 		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(500);
 		notebook.setCondition("중고");
+		notebook.setFilename("P1235.png");
 		
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);

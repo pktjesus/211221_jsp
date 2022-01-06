@@ -28,6 +28,7 @@
 				Product product = listOfProducts.get(i);
 		%>
 		<div class="col-md-6">
+			<img src="./resources/images/<%=product.getFilename()%>" style="width:100%" />
 			<h3><%= product.getPname() %></h3>
 			<p><%= product.getDescription() %>
 			<p><%= product.getUnitPrice() %>원

@@ -3,18 +3,23 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.dto.Product" %>    
 <%@ page import="com.dao.ProductRepository" %>
-
+<%@ page import="com.oreilly.servlet.*" %>    
+<%@ page import="com.oreilly.servlet.multipart.*" %>
+<%@ page import="java.util.*" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 
-	String productId = request.getParameter("productId");
-	String name = request.getParameter("name");
-	String unitPrice = request.getParameter("unitPrice");
-	String description = request.getParameter("description");
-	String manufacturer = request.getParameter("manufacturer");
-	String category = request.getParameter("category");
-	String unitsInStock = request.getParameter("unitsInStock");
-	String condition = request.getParameter("condition");
+	MultipartRequest multi = new MultipartRequest(
+		request, "D:\\jsp_project\\WebMarket\\src\\main\\webapp\\resources\\images", 10 * 1024 * 1024, "UTF-8", new DefaultFileRenamePolicy());
+
+	String productId = multi.getParameter("productId");
+	String name = multi.getParameter("name");
+	String unitPrice = multi.getParameter("unitPrice");
+	String description = multi.getParameter("description");
+	String manufacturer = multi.getParameter("manufacturer");
+	String category = multi.getParameter("category");
+	String unitsInStock = multi.getParameter("unitsInStock");
+	String condition = multi.getParameter("condition");
 	
 	Integer price;
 	if(unitPrice.isEmpty())
@@ -28,6 +33,10 @@
 	else
 		stock = Long.valueOf(unitsInStock);
 	
+	Enumeration files = multi.getFileNames();
+	String fname = (String) files.nextElement();
+	String fileName = multi.getFilesystemName(fname);
+	
 	ProductRepository dao = ProductRepository.getInstance();
 	Product product = new Product();
 	product.setProductId(productId);
@@ -37,6 +46,7 @@
 	product.setManufacturer(manufacturer);
 	product.setUnitsInStock(stock);
 	product.setCondition(condition);
+	product.setFilename(fileName);
 	
 	dao.addProduct(product);
 	
