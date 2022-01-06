@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.dto.Product" %>    
+<%@ page import="com.dto.Product" %>
+<%@ page import="com.dao.ProductRepository" %>    
 <jsp:useBean id="productDAO" class="com.dao.ProductRepository" />
 <html>
 <head>
@@ -17,8 +18,9 @@
 		</div>
 		<%
 			String id = request.getParameter("id");
-		
-			Product product = productDAO.getProductById(id);
+			ProductRepository dao = ProductRepository.getInstance();
+			//Product product = productDAO.getProductById(id);
+			Product product = dao.getProductById(id);
 		%>
 		<div class="container">
 			<div class="row">
