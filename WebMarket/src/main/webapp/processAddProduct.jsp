@@ -10,7 +10,9 @@
 	request.setCharacterEncoding("UTF-8");
 
 	MultipartRequest multi = new MultipartRequest(
-		request, "D:\\jsp_project\\WebMarket\\src\\main\\webapp\\resources\\images", 10 * 1024 * 1024, "UTF-8", new DefaultFileRenamePolicy());
+		request
+		, "D:\\jsp_project\\WebMarket\\src\\main\\webapp\\resources\\images"
+		, 10 * 1024 * 1024, "UTF-8", new DefaultFileRenamePolicy());
 
 	String productId = multi.getParameter("productId");
 	String name = multi.getParameter("name");
