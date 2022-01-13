@@ -83,7 +83,7 @@
 				</div>
 				<div class="form-group row">
 					<div class="col-sm-offset-2 col-sm-10 ">
-						<input type="button" class="btn btn-primary" value="등록" onclick="checkAddProduct()">
+						<input type="button" class="btn btn-primary" value="등록" onclick="checkAddProduct();">
 					</div>
 				</div>
 			</form>

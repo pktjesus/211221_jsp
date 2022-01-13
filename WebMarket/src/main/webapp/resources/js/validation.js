@@ -40,7 +40,7 @@ function checkAddProduct() {
 		return false;
 	}
 	
-	return true;
+	document.newProduct.submit();
 }	
 
 function check(regExp, e, msg) {
