@@ -1,11 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.dto.Product" %>    
+<%@ page import="com.dto.Product" %>
+<%-- <%@ page import="java.util.DateTime" %>     --%>
 <jsp:useBean id="productDAO" class="com.dao.ProductRepository" />
 <html>
 <head>
+<!-- <meta http-equiv='cache-control' content='no-cache'> -->
+<!-- <meta http-equiv='expires' content='0'> -->
+<!-- <meta http-equiv='pragma' content='no-cache'> -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<%-- <script src="./resources/js/validation.js?datetime=' + '<%=DateTime.Now.Ticks %>''"></script> --%>
 <script src="./resources/js/validation.js"></script>
 <title>상품 상세정보</title>
 </head>
@@ -64,9 +70,9 @@
 				<div class="form-group row">
 					<label class="col-sm-2">상태</label>
 					<div class="col-sm-5">
-						<input type="radio" name="condition" value="New" > 신규 제품 
-						<input type="radio" name="condition" value="Old" > 중고 제품 
-						<input type="radio" name="condition" value="Refurbished" > 재생 제품
+						<input type="radio" name="condition" value="New" checked> 신규 제품 
+						<input type="radio" name="condition" value="Old"> 중고 제품 
+						<input type="radio" name="condition" value="Refurbished"> 재생 제품
 					</div>
 				</div>
 				<div class="form-group row">
