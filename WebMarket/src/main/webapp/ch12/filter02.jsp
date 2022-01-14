@@ -10,7 +10,7 @@
 	<form method="post" action="filter02_process.jsp">
 		<p>아이디 : <input type="text" name="id" />
 		<p>패스워드 : <input type="password" name="passwd" />
-		<p><input type="button" value="전송" /> 
+		<p><input type="submit" value="전송" /> 
 	</form>
 </body>
 </html>
