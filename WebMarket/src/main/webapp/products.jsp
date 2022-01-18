@@ -7,7 +7,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<title>{productList}</title>
+<title>상품 목록</title>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
