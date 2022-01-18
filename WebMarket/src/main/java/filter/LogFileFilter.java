@@ -49,6 +49,12 @@ public class LogFileFilter implements Filter {
 		writer.println("=======================================================");
 	}
 	
+	public void destory() {
+		if(writer != null) {
+			writer.close();
+		}
+	}
+	
 	private String getURLPath(ServletRequest request) {
 		HttpServletRequest req;
 		String currentPath="";
