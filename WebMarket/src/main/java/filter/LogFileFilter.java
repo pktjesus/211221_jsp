@@ -37,7 +37,7 @@ public class LogFileFilter implements Filter {
 	}
 	
 	@Override
-	public void  doFilter(ServletRequest request,ServletResponse response,FilterChain chain) throws java.io.IOException, ServletException {
+	public void doFilter(ServletRequest request,ServletResponse response,FilterChain chain) throws java.io.IOException, ServletException {
 		long start = System.currentTimeMillis();
 		writer.println(" 접근한 URL 경로 : " + getURLPath(request));
 		writer.println(" 요청 처리 시작 시각 : " + getCurrentTime());

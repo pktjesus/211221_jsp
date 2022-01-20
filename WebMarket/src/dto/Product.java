@@ -1,47 +1,34 @@
-package com.dto;
+package dto;
 
 import java.io.Serializable;
 
 public class Product implements Serializable {
+
+	private static final long serialVersionUID = -4274700572038677000L;
+
+	private String productId;	//»óÇ° ¾ÆÀÌµğ
+	private String pname;		//»óÇ°¸í
+	private Integer unitPrice; //»óÇ° °¡°İ
+	private String description; //»óÇ° ¼³¸í
+	private String manufacturer;//Á¦Á¶»ç
+	private String category; 	//ºĞ·ù
+	private long unitsInStock; //Àç°í¼ö 
+	private String condition; 	//½Å»óÇ° or Áß°íÇ° or Àç»ıÇ°
+	private String filename; 	//ÀÌ¹ÌÁö ÆÄÀÏ¸í
+	private int quantity;		 //Àå¹Ù±¸´Ï¿¡ ´ãÀº °³¼ö
+
 	public Product() {
-		
+		super();
 	}
-	
+
 	public Product(String productId, String pname, Integer unitPrice) {
 		this.productId = productId;
 		this.pname = pname;
 		this.unitPrice = unitPrice;
 	}
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -8596989266989266397L;
 
-	private String productId;		// ìƒí’ˆ ì•„ì´ë””
-	private String pname;			// ìƒí’ˆëª…
-	private Integer unitPrice;
-	private String description;
-	private String manufacturer;
-	private String category;
-	private long unitsInStock;
-	private String condition;
-	private String filename;		// ì´ë¯¸ì§€ íŒŒì¼ëª…
-	private int quantity;			// ì¥ë°”êµ¬ë‹ˆì— ë‹´ì€ ê°œìˆ˜
-	
-	public String getQuantity() {
-		return productId;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-	
 	public String getProductId() {
 		return productId;
-	}
-
-	public void setProductId(String productId) {
-		this.productId = productId;
 	}
 
 	public String getPname() {
@@ -50,6 +37,10 @@ public class Product implements Serializable {
 
 	public void setPname(String pname) {
 		this.pname = pname;
+	}
+
+	public void setProductId(String productId) {
+		this.productId = productId;
 	}
 
 	public Integer getUnitPrice() {
@@ -107,4 +98,13 @@ public class Product implements Serializable {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}			
+	
 }
