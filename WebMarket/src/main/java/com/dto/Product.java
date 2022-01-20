@@ -28,8 +28,8 @@ public class Product implements Serializable {
 	private String filename;		// 이미지 파일명
 	private int quantity;			// 장바구니에 담은 개수
 	
-	public String getQuantity() {
-		return productId;
+	public int getQuantity() {
+		return quantity;
 	}
 
 	public void setQuantity(int quantity) {
