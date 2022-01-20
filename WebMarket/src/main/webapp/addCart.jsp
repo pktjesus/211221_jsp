@@ -21,5 +21,6 @@
 	
 	
 	
-	response.sendRedirect("product.jsp?id=" + id);
+	//response.sendRedirect("product.jsp?id=" + id);		// 상세상품으로 가기
+	response.sendRedirect("cart.jsp");			// 장바구니 페이지로 가기
 %>

@@ -37,7 +37,7 @@
 				</tr>
 				<%				
 					int sum = 0;
-					ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartlist");
+					ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartList");
 					if (cartList == null)
 						cartList = new ArrayList<Product>();
 
